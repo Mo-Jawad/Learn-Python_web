@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Programming Basics - Py-Learn-HTML</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐍</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            python: {
+              blue: '#387EB8',
+              darkBlue: '#1E415E',
+              yellow: '#FFE873',
+              gold: '#FFD43B',
+              accent: '#00FFA3',
+              dark: '#0B0F19',
+              card: '#111827',
+              border: '#1F2937'
+            }
+          },
+          fontFamily: {
+            mono: ['Fira Code', 'monospace'],
+            sans: ['Inter', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    pre code {
+      font-family: 'Fira Code', monospace;
+    }
+  </style>
+</head>
+<body class="bg-[#0B0F19] text-slate-100 font-sans min-h-screen selection:bg-yellow-400 selection:text-slate-900">
+  
+  <!-- Header Bar -->
+  <header class="sticky top-0 z-50 bg-[#111827]/80 backdrop-blur-md border-b border-gray-800">
+    <div class="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between">
+      <div class="flex items-center space-x-3">
+        <a href="/" class="flex items-center space-x-2 text-xl font-bold tracking-tight">
+          <span class="text-2xl">🐍</span>
+          <span class="bg-gradient-to-r from-yellow-400 to-amber-200 bg-clip-text text-transparent">Py-Learn-HTML</span>
+        </a>
+        <span class="text-xs px-2.5 py-0.5 rounded-full bg-blue-500/10 text-blue-400 border border-blue-500/30">Module 01</span>
+      </div>
+      <div class="flex items-center space-x-3">
+        <a href="/" class="text-sm font-medium text-slate-300 hover:text-white px-3 py-1.5 rounded-lg border border-gray-700 hover:bg-gray-800 transition">
+          ← Back to Catalog
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Container -->
+  <main class="max-w-4xl mx-auto px-4 py-10">
+    
+    <!-- Hero / Title -->
+    <div class="mb-10 pb-8 border-b border-gray-800">
+      <div class="flex items-center space-x-2 text-sm text-cyan-400 mb-2 font-mono">
+        <span># Fundamentals</span>
+        <span>•</span>
+        <span>15 Min Read</span>
+        <span>•</span>
+        <span class="text-emerald-400">Beginner Friendly</span>
+      </div>
+      <h1 class="text-3xl md:text-5xl font-extrabold text-white tracking-tight mb-4">
+        Python Programming Basics
+      </h1>
+      <p class="text-lg text-slate-300 leading-relaxed">
+        Welcome to your first step in learning Python. In this module, you'll learn how Python executes instructions, stores data in variables, performs calculations, and handles input and output.
+      </p>
+    </div>
+
+    <!-- Section 1: The Zen of Python & Hello World -->
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold text-white mb-4 flex items-center gap-2">
+        <span class="w-8 h-8 rounded-lg bg-yellow-500/20 text-yellow-400 flex items-center justify-center text-sm font-mono border border-yellow-500/30">1</span>
+        Your First Python Program: "Hello, World!"
+      </h2>
+      <p class="text-slate-300 mb-4 leading-relaxed">
+        Python is famous for its clean, human-readable syntax. Unlike C++ or Java, Python does not require boilerplate classes or semicolon terminators to print text to the console.
+      </p>
+
+      <!-- Code Snippet Box -->
+      <div class="bg-[#111827] border border-gray-800 rounded-xl overflow-hidden shadow-2xl mb-6">
+        <div class="bg-[#1a2234] px-4 py-2.5 flex items-center justify-between border-b border-gray-800">
+          <div class="flex items-center space-x-2">
+            <div class="w-3 h-3 rounded-full bg-red-500/80"></div>
+            <div class="w-3 h-3 rounded-full bg-yellow-500/80"></div>
+            <div class="w-3 h-3 rounded-full bg-green-500/80"></div>
+            <span class="text-xs font-mono text-slate-400 ml-2">hello_world.py</span>
+          </div>
+          <button onclick="runCode('code1', 'out1')" class="px-3 py-1 text-xs font-semibold text-slate-900 bg-yellow-400 hover:bg-yellow-300 rounded transition flex items-center gap-1 shadow">
+            ▶ Run Code
+          </button>
+        </div>
+        <pre class="p-4 text-sm font-mono overflow-x-auto text-slate-200"><code id="code1"><span class="text-gray-500"># Welcome to Python!</span>
+<span class="text-purple-400">print</span>(<span class="text-emerald-300">"Hello, World!"</span>)
+<span class="text-purple-400">print</span>(<span class="text-emerald-300">"Welcome to Py-Learn-HTML created by Md Jaoyad SWE 🚀"</span>)</code></pre>
+        <div id="out1" class="hidden bg-[#0a0d14] border-t border-gray-800 p-4 font-mono text-xs text-emerald-400">
+          <div class="text-gray-500 mb-1">--- Terminal Output ---</div>
+          <div>Hello, World!</div>
+          <div>Welcome to Py-Learn-HTML created by Md Jaoyad SWE 🚀</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2: Variables & Data Types -->
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold text-white mb-4 flex items-center gap-2">
+        <span class="w-8 h-8 rounded-lg bg-blue-500/20 text-blue-400 flex items-center justify-center text-sm font-mono border border-blue-500/30">2</span>
+        Variables and Primitive Data Types
+      </h2>
+      <p class="text-slate-300 mb-4 leading-relaxed">
+        In Python, variables are dynamically typed containers. You don't need to specify <code class="bg-gray-800 px-1.5 py-0.5 rounded text-yellow-300 font-mono text-sm">int</code> or <code class="bg-gray-800 px-1.5 py-0.5 rounded text-yellow-300 font-mono text-sm">String</code>; Python detects the type automatically at runtime!
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+        <div class="p-4 rounded-xl bg-gray-900/60 border border-gray-800">
+          <h3 class="font-bold text-yellow-400 mb-2 font-mono text-sm">1. Integer (int) & Float (float)</h3>
+          <p class="text-sm text-slate-300 font-mono bg-black/40 p-2 rounded">
+            age = 25<br>
+            price = 99.95
+          </p>
+        </div>
+        <div class="p-4 rounded-xl bg-gray-900/60 border border-gray-800">
+          <h3 class="font-bold text-cyan-400 mb-2 font-mono text-sm">2. String (str)</h3>
+          <p class="text-sm text-slate-300 font-mono bg-black/40 p-2 rounded">
+            platform = "Py-Learn-HTML"<br>
+            author = 'Md Jaoyad'
+          </p>
+        </div>
+        <div class="p-4 rounded-xl bg-gray-900/60 border border-gray-800">
+          <h3 class="font-bold text-emerald-400 mb-2 font-mono text-sm">3. Boolean (bool)</h3>
+          <p class="text-sm text-slate-300 font-mono bg-black/40 p-2 rounded">
+            is_active = True<br>
+            is_completed = False
+          </p>
+        </div>
+        <div class="p-4 rounded-xl bg-gray-900/60 border border-gray-800">
+          <h3 class="font-bold text-pink-400 mb-2 font-mono text-sm">4. Type Checking (type())</h3>
+          <p class="text-sm text-slate-300 font-mono bg-black/40 p-2 rounded">
+            print(type(age)) # &lt;class 'int'&gt;
+          </p>
+        </div>
+      </div>
+
+      <!-- Interactive Playground Box -->
+      <div class="bg-[#111827] border border-gray-800 rounded-xl overflow-hidden shadow-2xl mb-6">
+        <div class="bg-[#1a2234] px-4 py-2.5 flex items-center justify-between border-b border-gray-800">
+          <span class="text-xs font-mono text-slate-400">variables_demo.py</span>
+          <button onclick="runCode('code2', 'out2')" class="px-3 py-1 text-xs font-semibold text-slate-900 bg-yellow-400 hover:bg-yellow-300 rounded transition flex items-center gap-1 shadow">
+            ▶ Run Code
+          </button>
+        </div>
+        <pre class="p-4 text-sm font-mono overflow-x-auto text-slate-200"><code id="code2"><span class="text-gray-500"># Variable declarations</span>
+user_name = <span class="text-emerald-300">"Alex"</span>
+lessons_completed = <span class="text-yellow-400">5</span>
+python_mastery_score = <span class="text-yellow-400">92.5</span>
+is_certified = <span class="text-purple-400">True</span>
+
+<span class="text-purple-400">print</span>(<span class="text-emerald-300">f"Learner: {user_name} | Progress: {lessons_completed} lessons | Score: {python_mastery_score}%"</span>)
+<span class="text-purple-400">print</span>(<span class="text-emerald-300">f"Certified Status: {is_certified} (Type: {type(is_certified).__name__})"</span>)</code></pre>
+        <div id="out2" class="hidden bg-[#0a0d14] border-t border-gray-800 p-4 font-mono text-xs text-emerald-400">
+          <div class="text-gray-500 mb-1">--- Terminal Output ---</div>
+          <div>Learner: Alex | Progress: 5 lessons | Score: 92.5%</div>
+          <div>Certified Status: True (Type: bool)</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quick Quiz Section -->
+    <section class="mb-12 bg-gradient-to-r from-blue-900/20 to-indigo-900/20 border border-blue-800/40 rounded-2xl p-6">
+      <h3 class="text-lg font-bold text-white mb-3 flex items-center gap-2">
+        <span>⚡</span> Quick Knowledge Check
+      </h3>
+      <p class="text-sm text-slate-300 mb-4">
+        What is the data type of the expression <code class="text-yellow-300 font-mono">3.14159</code> in Python?
+      </p>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-3" id="quiz1">
+        <button onclick="checkQuiz(this, false)" class="p-3 text-left rounded-xl bg-gray-900 border border-gray-700 hover:border-yellow-400 text-sm font-mono transition">A) int</button>
+        <button onclick="checkQuiz(this, true)" class="p-3 text-left rounded-xl bg-gray-900 border border-gray-700 hover:border-yellow-400 text-sm font-mono transition">B) float</button>
+        <button onclick="checkQuiz(this, false)" class="p-3 text-left rounded-xl bg-gray-900 border border-gray-700 hover:border-yellow-400 text-sm font-mono transition">C) str</button>
+        <button onclick="checkQuiz(this, false)" class="p-3 text-left rounded-xl bg-gray-900 border border-gray-700 hover:border-yellow-400 text-sm font-mono transition">D) decimal</button>
+      </div>
+      <div id="quizResult" class="mt-3 text-xs font-mono hidden"></div>
+    </section>
+
+    <!-- Bottom Navigation -->
+    <div class="flex items-center justify-between pt-6 border-t border-gray-800">
+      <a href="/" class="text-sm text-slate-400 hover:text-white transition">← All Modules</a>
+      <a href="/py-html/control_flow.html" class="px-5 py-2.5 rounded-xl bg-yellow-400 text-slate-900 font-bold text-sm hover:bg-yellow-300 transition shadow-lg shadow-yellow-400/20 flex items-center gap-2">
+        Next: Control Flow & Conditionals →
+      </a>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="mt-20 border-t border-gray-800 py-6 text-center text-xs text-slate-500 font-mono">
+    <p>Py-Learn-HTML • Crafted with ❤️ by <span class="text-yellow-400 font-bold">Md Jaoyad SWE</span></p>
+  </footer>
+
+  <script>
+    function runCode(codeId, outId) {
+      const out = document.getElementById(outId);
+      out.classList.remove('hidden');
+    }
+
+    function checkQuiz(btn, isCorrect) {
+      const resultDiv = document.getElementById('quizResult');
+      const allBtns = document.querySelectorAll('#quiz1 button');
+      allBtns.forEach(b => {
+        b.disabled = true;
+        b.classList.remove('border-yellow-400');
+      });
+
+      if (isCorrect) {
+        btn.classList.add('bg-emerald-900/60', 'border-emerald-500', 'text-emerald-300');
+        resultDiv.className = "mt-3 text-xs font-mono text-emerald-400 p-3 rounded-lg bg-emerald-950/40 border border-emerald-800/50";
+        resultDiv.innerHTML = "✅ Correct! In Python, floating-point numbers with decimals are represented as 'float'.";
+      } else {
+        btn.classList.add('bg-red-900/60', 'border-red-500', 'text-red-300');
+        resultDiv.className = "mt-3 text-xs font-mono text-red-400 p-3 rounded-lg bg-red-950/40 border border-red-800/50";
+        resultDiv.innerHTML = "❌ Not quite! Python represents fractional numbers with decimals as 'float'.";
+      }
+      resultDiv.classList.remove('hidden');
+    }
+  </script>
+</body>
+</html>

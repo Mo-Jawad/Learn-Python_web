@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>File I/O & Exceptions - Py-Learn-HTML</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐍</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    pre code { font-family: 'Fira Code', monospace; }
+  </style>
+</head>
+<body class="bg-[#0B0F19] text-slate-100 font-sans min-h-screen selection:bg-yellow-400 selection:text-slate-900">
+  
+  <header class="sticky top-0 z-50 bg-[#111827]/80 backdrop-blur-md border-b border-gray-800">
+    <div class="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between">
+      <div class="flex items-center space-x-3">
+        <a href="/" class="flex items-center space-x-2 text-xl font-bold tracking-tight">
+          <span class="text-2xl">🐍</span>
+          <span class="bg-gradient-to-r from-yellow-400 to-amber-200 bg-clip-text text-transparent">Py-Learn-HTML</span>
+        </a>
+        <span class="text-xs px-2.5 py-0.5 rounded-full bg-violet-500/10 text-violet-400 border border-violet-500/30">Module 06</span>
+      </div>
+      <a href="/" class="text-sm font-medium text-slate-300 hover:text-white px-3 py-1.5 rounded-lg border border-gray-700 hover:bg-gray-800 transition">
+        ← Back to Catalog
+      </a>
+    </div>
+  </header>
+
+  <main class="max-w-4xl mx-auto px-4 py-10">
+    <div class="mb-10 pb-8 border-b border-gray-800">
+      <div class="flex items-center space-x-2 text-sm text-violet-400 mb-2 font-mono">
+        <span># Reliability & Systems</span>
+        <span>•</span>
+        <span>22 Min Read</span>
+        <span>•</span>
+        <span class="text-emerald-400">Production Grade</span>
+      </div>
+      <h1 class="text-3xl md:text-5xl font-extrabold text-white tracking-tight mb-4">
+        File I/O & Exception Handling
+      </h1>
+      <p class="text-lg text-slate-300 leading-relaxed">
+        Safeguard your software with defensive coding using <code class="text-yellow-300 font-mono">try</code>, <code class="text-yellow-300 font-mono">except</code>, <code class="text-yellow-300 font-mono">finally</code> and Python's context manager <code class="text-yellow-300 font-mono">with open()</code>.
+      </p>
+    </div>
+
+    <!-- Section: Exception Handling -->
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold text-white mb-4 flex items-center gap-2">
+        <span class="w-8 h-8 rounded-lg bg-violet-500/20 text-violet-400 flex items-center justify-center text-sm font-mono border border-violet-500/30">1</span>
+        Safe File Handling & Graceful Error Recovery
+      </h2>
+
+      <div class="bg-[#111827] border border-gray-800 rounded-xl overflow-hidden shadow-2xl mb-6">
+        <div class="bg-[#1a2234] px-4 py-2.5 flex items-center justify-between border-b border-gray-800">
+          <span class="text-xs font-mono text-slate-400">file_io_safe.py</span>
+          <button onclick="runCode('code1', 'out1')" class="px-3 py-1 text-xs font-semibold text-slate-900 bg-yellow-400 hover:bg-yellow-300 rounded transition flex items-center gap-1 shadow">
+            ▶ Run Code
+          </button>
+        </div>
+        <pre class="p-4 text-sm font-mono overflow-x-auto text-slate-200"><code id="code1"><span class="text-purple-400">def</span> <span class="text-blue-400">load_python_project_config</span>(filepath):
+    <span class="text-purple-400">try</span>:
+        <span class="text-purple-400">print</span>(<span class="text-emerald-300">f"[Attempting] Reading config from '{filepath}'..."</span>)
+        <span class="text-purple-400">with</span> <span class="text-purple-400">open</span>(filepath, <span class="text-emerald-300">'r'</span>) <span class="text-purple-400">as</span> file:
+            <span class="text-purple-400">return</span> file.read()
+    <span class="text-purple-400">except</span> FileNotFoundError:
+        <span class="text-purple-400">print</span>(<span class="text-yellow-400">"[Notice] File not found. Generating default system config..."</span>)
+        <span class="text-purple-400">return</span> {<span class="text-emerald-300">"status"</span>: <span class="text-emerald-300">"healthy"</span>, <span class="text-emerald-300">"platform"</span>: <span class="text-emerald-300">"Py-Learn-HTML"</span>, <span class="text-emerald-300">"author"</span>: <span class="text-emerald-300">"Md Jaoyad SWE"</span>}
+    <span class="text-purple-400">finally</span>:
+        <span class="text-purple-400">print</span>(<span class="text-cyan-400">"[Clean-up] Resource handles successfully released."</span>)
+
+result = load_python_project_config(<span class="text-emerald-300">"config.json"</span>)
+<span class="text-purple-400">print</span>(<span class="text-emerald-300">f"Active Configuration: {result}"</span>)</code></pre>
+        <div id="out1" class="hidden bg-[#0a0d14] border-t border-gray-800 p-4 font-mono text-xs text-emerald-400">
+          <div class="text-gray-500 mb-1">--- Terminal Output ---</div>
+          <div>[Attempting] Reading config from 'config.json'...</div>
+          <div>[Notice] File not found. Generating default system config...</div>
+          <div>[Clean-up] Resource handles successfully released.</div>
+          <div>Active Configuration: {'status': 'healthy', 'platform': 'Py-Learn-HTML', 'author': 'Md Jaoyad SWE'}</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bottom Navigation -->
+    <div class="flex items-center justify-between pt-6 border-t border-gray-800">
+      <a href="/py-html/oop_python.html" class="text-sm text-slate-400 hover:text-white transition">← Previous: OOP in Python</a>
+      <a href="/" class="px-5 py-2.5 rounded-xl bg-yellow-400 text-slate-900 font-bold text-sm hover:bg-yellow-300 transition shadow-lg shadow-yellow-400/20 flex items-center gap-2">
+        Return to Home & Catalog 🚀
+      </a>
+    </div>
+  </main>
+
+  <footer class="mt-20 border-t border-gray-800 py-6 text-center text-xs text-slate-500 font-mono">
+    <p>Py-Learn-HTML • Crafted with ❤️ by <span class="text-yellow-400 font-bold">Md Jaoyad SWE</span></p>
+  </footer>
+
+  <script>
+    function runCode(codeId, outId) {
+      document.getElementById(outId).classList.remove('hidden');
+    }
+  </script>
+</body>
+</html>
