@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import Terminal from './Terminal';
+import Glow from './Glow';
 
 // Shared easing for calm, smooth entrances
 const ease = [0.22, 1, 0.36, 1];
@@ -10,7 +11,10 @@ const ease = [0.22, 1, 0.36, 1];
  */
 export default function Hero() {
   return (
-    <section className="max-w-6xl mx-auto px-6 pt-24 pb-28">
+    <section className="relative max-w-6xl mx-auto px-6 pt-24 pb-28">
+      {/* Backdrop lighting behind headline and terminal */}
+      <Glow tone="accent" className="top-10 -left-24 w-96 h-96" />
+      <Glow tone="blue" className="top-24 right-0 w-96 h-96" />
       <div className="grid lg:grid-cols-2 gap-16 items-center">
         {/* Left: copy */}
         <motion.div
@@ -52,3 +56,4 @@ export default function Hero() {
     </section>
   );
 }
+
