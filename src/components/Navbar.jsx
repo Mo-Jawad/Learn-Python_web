@@ -18,6 +18,7 @@ export default function Navbar() {
           <a href="#goals" className="hover:text-white transition-colors">Goals</a>
           <a href="#workflow" className="hover:text-white transition-colors">Workflow</a>
           <a href="#courses" className="hover:text-white transition-colors">Modules</a>
+          <a href="#contact" className="hover:text-white transition-colors">Contact</a>
           <a href="#creator" className="hover:text-white transition-colors">About</a>
         </nav>
       </div>
