@@ -16,10 +16,17 @@ export default function Footer() {
   return (
     <footer id="creator" className="border-t border-line">
       <div className="max-w-6xl mx-auto px-6 py-10 flex flex-col sm:flex-row items-center justify-between gap-6">
-        <p className="text-sm text-neutral-500">
-          © {new Date().getFullYear()} Py-Learn-HTML · Created by{' '}
-          <span className="text-white">Md Jaoyad SWE</span>
-        </p>
+        <div className="flex items-center gap-3">
+          <img
+            src="/logo.webp"
+            alt="Py-Learn-HTML Logo"
+            className="w-7 h-7 rounded-md object-contain shadow-sm"
+          />
+          <p className="text-sm text-neutral-500">
+            © {new Date().getFullYear()} Py-Learn-HTML · Created by{' '}
+            <span className="text-white">Md Jaoyad SWE</span>
+          </p>
+        </div>
 
         <div className="flex items-center gap-5">
           {socials.map(({ name, url, icon: Icon }) => (

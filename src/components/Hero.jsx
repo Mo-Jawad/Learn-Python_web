@@ -22,7 +22,10 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, ease }}
         >
-          <p className="label mb-6">Py-Learn-HTML</p>
+          <div className="inline-flex items-center gap-2.5 px-3 py-1.5 rounded-full border border-line bg-surface/80 backdrop-blur mb-6 shadow-sm">
+            <img src="/logo.webp" alt="Py-Learn-HTML Logo" className="w-5 h-5 rounded object-contain" />
+            <span className="label text-[11px] text-neutral-300">Py-Learn-HTML</span>
+          </div>
 
           <h1 className="text-5xl sm:text-6xl font-light tracking-tightest leading-[1.05] text-white">
             Learn Python with

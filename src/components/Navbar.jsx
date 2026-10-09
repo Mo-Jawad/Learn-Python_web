@@ -7,10 +7,14 @@ export default function Navbar() {
   return (
     <header className="sticky top-0 z-50 border-b border-line bg-ink/80 backdrop-blur">
       <div className="max-w-6xl mx-auto px-6 h-14 flex items-center justify-between">
-        {/* Wordmark */}
-        <a href="#" className="flex items-center gap-2 text-sm font-medium tracking-tight text-white">
-          <span className="w-1.5 h-1.5 rounded-full bg-accent" />
-          Py-Learn-HTML
+        {/* Wordmark with Brand Logo */}
+        <a href="#" className="flex items-center gap-2.5 text-sm font-medium tracking-tight text-white group">
+          <img
+            src="/logo.webp"
+            alt="Py-Learn-HTML Logo"
+            className="w-7 h-7 rounded-md object-contain transition-transform group-hover:scale-105 shadow-sm"
+          />
+          <span className="font-semibold tracking-tight">Py-Learn-HTML</span>
         </a>
 
         {/* Links */}
