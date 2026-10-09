@@ -9,7 +9,6 @@
   body {
     @apply bg-ink text-neutral-200 font-sans;
     font-feature-settings: 'cv11', 'ss01';
-    overflow-x: hidden;
   }
   ::selection {
     @apply bg-accent text-black;
@@ -26,6 +25,15 @@
   .label {
     @apply font-mono text-[11px] uppercase tracking-[0.14em] text-neutral-500;
   }
+}
+
+/* Hide scrollbar utility for touch/swipe carousels */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 /* ---- Backdrop glow + flowchart animations ---- */

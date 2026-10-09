@@ -2,7 +2,7 @@ import React from 'react';
 import pythonCourses from '../data/courses';
 
 /**
- * StatsSection — a thin, quiet row of three facts separated by hairlines.
+ * StatsSection — A quiet row of three facts, responsive across mobile and desktop.
  */
 export default function StatsSection() {
   const stats = [
@@ -12,12 +12,12 @@ export default function StatsSection() {
   ];
 
   return (
-    <section className="border-y border-line">
-      <div className="max-w-6xl mx-auto px-6 grid grid-cols-3 divide-x divide-line">
+    <section className="border-y border-line bg-surface/20">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 grid grid-cols-3 divide-x divide-line">
         {stats.map((s) => (
-          <div key={s.label} className="py-8 px-4 first:pl-0">
-            <p className="text-3xl font-light tracking-tight text-white">{s.value}</p>
-            <p className="label mt-2">{s.label}</p>
+          <div key={s.label} className="py-6 sm:py-8 px-2 sm:px-4 first:pl-0 text-center sm:text-left">
+            <p className="text-xl sm:text-3xl font-light tracking-tight text-white">{s.value}</p>
+            <p className="label mt-1 sm:mt-2 text-[10px] sm:text-[11px] truncate">{s.label}</p>
           </div>
         ))}
       </div>

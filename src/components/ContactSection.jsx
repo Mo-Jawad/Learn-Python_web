@@ -100,7 +100,7 @@ export default function ContactSection() {
   };
 
   return (
-    <section id="contact" className="relative max-w-6xl mx-auto px-6 py-24">
+    <section id="contact" className="relative max-w-6xl mx-auto px-4 sm:px-6 py-16 sm:py-24 scroll-mt-20">
       {/* Decorative ambient backdrop lighting */}
       <Glow tone="accent" className="top-12 -left-20 w-80 h-80" />
       <Glow tone="blue" className="bottom-0 right-10 w-80 h-80" />
@@ -111,7 +111,7 @@ export default function ContactSection() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: '-60px' }}
         transition={{ duration: 0.7, ease }}
-        className="relative overflow-hidden rounded-xl rounded-xi bg-[#dcfce7] border border-emerald-300/80 shadow-[0_20px_50px_-15px_rgba(16,185,129,0.25)] text-black p-8 sm:p-12 lg:p-14"
+        className="relative overflow-hidden rounded-xl rounded-xi bg-[#dcfce7] border border-emerald-300/80 shadow-[0_20px_50px_-15px_rgba(16,185,129,0.25)] text-black p-5 sm:p-10 lg:p-14"
       >
         <div className="grid lg:grid-cols-12 gap-10 lg:gap-14 items-start">
           {/* Left Column: Context & Guidelines on what messages to send */}

@@ -20,7 +20,7 @@ const GOALS = [
  */
 export default function GoalsSection() {
   return (
-    <section id="goals" className="relative max-w-6xl mx-auto px-6 py-24">
+    <section id="goals" className="relative max-w-6xl mx-auto px-4 sm:px-6 py-16 sm:py-24 scroll-mt-20">
       <Glow tone="violet" className="top-10 -left-24 w-80 h-80" />
       <Glow tone="accent" className="bottom-0 right-0 w-72 h-72" />
 

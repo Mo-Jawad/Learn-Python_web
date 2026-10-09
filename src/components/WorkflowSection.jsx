@@ -45,11 +45,11 @@ function Connector({ delay }) {
  */
 export default function WorkflowSection() {
   return (
-    <section id="workflow" className="relative border-y border-line overflow-hidden">
+    <section id="workflow" className="relative border-y border-line overflow-hidden scroll-mt-20">
       <Glow tone="blue" className="-top-24 left-1/3 w-96 h-96" />
       <Glow tone="accent" className="bottom-0 -left-20 w-72 h-72" />
 
-      <div className="max-w-6xl mx-auto px-6 py-24">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 py-16 sm:py-24">
         <p className="label mb-3">How it works</p>
         <h2 className="text-3xl font-light tracking-tight text-white">Overall workflow</h2>
 

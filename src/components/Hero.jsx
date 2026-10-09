@@ -11,11 +11,11 @@ const ease = [0.22, 1, 0.36, 1];
  */
 export default function Hero() {
   return (
-    <section className="relative max-w-6xl mx-auto px-6 pt-24 pb-28">
+    <section className="relative max-w-6xl mx-auto px-4 sm:px-6 pt-16 sm:pt-24 pb-20 sm:pb-28">
       {/* Backdrop lighting behind headline and terminal */}
       <Glow tone="accent" className="top-10 -left-24 w-96 h-96" />
       <Glow tone="blue" className="top-24 right-0 w-96 h-96" />
-      <div className="grid lg:grid-cols-2 gap-16 items-center">
+      <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
         {/* Left: copy */}
         <motion.div
           initial={{ opacity: 0, y: 16 }}
@@ -27,7 +27,7 @@ export default function Hero() {
             <span className="label text-[11px] text-neutral-300">Py-Learn-HTML</span>
           </div>
 
-          <h1 className="text-5xl sm:text-6xl font-light tracking-tightest leading-[1.05] text-white">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-light tracking-tightest leading-[1.08] text-white">
             Learn Python with
             <br />
             <span className="text-accent">new Experience</span>
